@@ -1,0 +1,23 @@
+body{margin:0;font-family:system-ui;background:#f6f0e8;color:#0f2433}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+.header{position:sticky;top:0;background:#f6f0e8cc;backdrop-filter:blur(8px);border-bottom:1px solid #ddd}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{height:44px}
+.nav-links a{margin-left:18px;font-weight:700}
+.hero{padding:80px 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+.lead{font-size:18px;color:#555}
+.cta-row{margin:20px 0}
+.btn{padding:14px 18px;border-radius:14px;font-weight:800;text-decoration:none}
+.primary{background:linear-gradient(135deg,#ff9a2f,#d96c22);color:#111}
+.ghost{border:1px solid #ccc}
+.mock-card{background:white;padding:20px;border-radius:18px;margin-bottom:12px}
+.section{padding:60px 0}
+.alt{background:#fff7ee}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card,.price-card{background:white;padding:20px;border-radius:18px}
+.featured{box-shadow:0 20px 40px rgba(0,0,0,.12)}
+.footer{text-align:center;padding:40px 0;border-top:1px solid #ddd}
+.footer-logo{height:40px}
+.placeholder{border:2px dashed #aaa;padding:40px;border-radius:18px;color:#777}
+@media(max-width:900px){.hero-grid,.grid3{grid-template-columns:1fr}}
