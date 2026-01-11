@@ -18,7 +18,7 @@ a {
   font-size: 18px;
   margin-bottom: 36px;
 }
-.btn{padding: 14px 20px;border-radius:14px;text-decoration:none;font-weight:700}
+.btn{padding: 14px 20px;border-radius:14px;text-decoration:none;font-weight:700; margin-bottom: 36px}
 .primary{background:#0f2433;color:#fff}
 .ghost{border:1px solid #ccc}
 .hero-mock .mock-card{background:#fff;padding:24px;border-radius:18px;margin-bottom:14px}
