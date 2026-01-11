@@ -32,6 +32,6 @@ a {
 .listings{background:#eef3f7;padding:80px 0}
 .listings-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .logos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.cta-section{padding:80px 0;text-align:center}
+.cta-section{padding:100px 0;text-align:center}
 .footer{text-align:center;padding:30px;border-top:1px solid #e0e0e0}
 @media(max-width:900px){.hero-grid,.grid-3,.review-grid,.listings-grid{grid-template-columns:1fr}}
