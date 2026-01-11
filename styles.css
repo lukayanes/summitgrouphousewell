@@ -16,7 +16,7 @@ body{margin:0;font-family:system-ui;background:#f6f7f4;color:#0f2433}
 .hero-mock .mock-card{background:#fff;padding:24px;border-radius:18px;margin-bottom:14px}
 .trust{padding:40px 0}
 .trust-grid{display:flex;justify-content:space-between;align-items:center}
-.features{background:#f2f6f2;padding:80px 0}
+.features{background:#eef3f7;padding:80px 0}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 .feature{background:#fff;padding:24px;border-radius:22px}
 .center{text-align:center;margin-top:40px}
@@ -24,7 +24,7 @@ body{margin:0;font-family:system-ui;background:#f6f7f4;color:#0f2433}
 .reviews{padding:80px 0}
 .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .review{background:#fff;padding:24px;border-radius:22px}
-.listings{background:#f2f6f2;padding:80px 0}
+.listings{background:#eef3f7;padding:80px 0}
 .listings-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .logos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .cta-section{padding:80px 0;text-align:center}
