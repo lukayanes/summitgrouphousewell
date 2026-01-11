@@ -42,3 +42,86 @@ a {
 .cta-section{padding:100px 0;text-align:center}
 .footer{text-align:center;padding:30px;border-top:1px solid #e0e0e0}
 @media(max-width:900px){.hero-grid,.grid-3,.review-grid,.listings-grid{grid-template-columns:1fr}}
+/* ===== Pricing page (Housewell-style) ===== */
+.pricing-wrap { max-width: 980px; }
+.pricing-title {
+  font-family: serif;
+  font-size: 44px;
+  line-height: 1.05;
+  text-align: center;
+  margin: 30px auto 34px;
+}
+.pricing-title .accent { color: #6FAED9; }
+
+.housewell-two {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+.price-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid #e6edf3;
+  box-shadow: 0 18px 40px rgba(15,36,51,.06);
+}
+.price-card.featured {
+  border: 2px solid #0f2433;
+  box-shadow: 0 22px 55px rgba(15,36,51,.10);
+}
+.plan { margin: 0 0 8px; font-family: serif; font-size: 26px; }
+.plan-sub { margin: 0 0 10px; font-weight: 700; }
+.plan-desc { margin: 0 0 16px; color: #334b5d; }
+.plan-btn { margin-top: 6px; margin-bottom: 18px; }
+.plan-list { margin-top: 0; }
+.fineprint { margin-top: 14px; color: #5a6f82; font-size: 12px; line-height: 1.5; }
+
+/* ===== FAQ (Housewell + / -) ===== */
+.faq-wrap { max-width: 860px; }
+.faq-title {
+  font-family: serif;
+  font-size: 46px;
+  text-align: center;
+  margin: 10px 0 28px;
+}
+.faq-list { border-top: 1px solid #e6edf3; }
+.faq-item {
+  border-bottom: 1px solid #e6edf3;
+  padding: 16px 0;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  font-family: serif;
+  font-size: 20px;
+  color: #0f2433;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-body { padding: 10px 0 0; color: #334b5d; max-width: 760px; }
+.faq-body p { margin: 0; line-height: 1.6; }
+
+.faq-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;
+  color: #0f2433;
+  flex: 0 0 auto;
+}
+.faq-item .faq-icon::before { content: "+"; }
+.faq-item[open] .faq-icon::before { content: "−"; }
+
+.faq-foot { text-align: center; margin-top: 18px; color: #334b5d; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .housewell-two { grid-template-columns: 1fr; }
+  .pricing-title { font-size: 38px; }
+}
+
