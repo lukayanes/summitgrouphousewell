@@ -13,7 +13,7 @@ a {
 .hero{padding:80px 0}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
 .hero h1{font-family:serif;font-size:48px}
-.hero h1 span{color:#e26a1a}
+.hero h1 span{color:#6FAED9}
 .lead{font-size:18px}
 .btn{padding:14px 20px;border-radius:14px;text-decoration:none;font-weight:700}
 .primary{background:#0f2433;color:#fff}
