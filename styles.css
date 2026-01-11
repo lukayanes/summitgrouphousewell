@@ -9,7 +9,11 @@ a {
 .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
 .logo{height:140px}
 .links a,.phone{margin-left:18px;font-weight:600}
-.banner{text-align:center;padding:10px;background:#fff3e8}
+.banner {
+  text-align: center;
+  padding: 10px;
+  background: rgba(111, 174, 217, 0.15); /* light blue */
+}
 .hero{padding:80px 0}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
 .hero h1{font-family:serif;font-size:48px}
