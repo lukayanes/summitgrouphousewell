@@ -335,4 +335,8 @@ a {
     grid-template-columns: 1fr;
   }
 }
+.btn.primary {
+  background-color: #0f2a1f; /* your navy / dark green */
+  color: #ffffff;
+}
 
