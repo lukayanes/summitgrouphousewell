@@ -708,3 +708,9 @@ a {
     gap: 40px;
   }
 }
+
+/* Force SVG icons to Housewell light blue */
+.feature-icon img {
+  filter: invert(63%) sepia(22%) saturate(747%) hue-rotate(168deg) brightness(95%) contrast(92%);
+}
+
