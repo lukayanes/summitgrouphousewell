@@ -587,3 +587,46 @@ a {
     margin-bottom: 22px;
   }
 }
+
+/* Pricing card internal spacing */
+.price-card .plan { 
+  margin: 0 0 8px !important; 
+}
+
+.price-card .plan-sub { 
+  margin: 0 0 10px !important; 
+}
+
+.price-card .plan-desc { 
+  margin: 0 0 14px !important; 
+}
+
+.price-card .plan-btn { 
+  margin: 10px 0 14px !important; 
+  display: inline-block;
+}
+
+.price-card ul,
+.price-card .plan-list {
+  margin: 0 !important;
+  padding-left: 18px;
+}
+
+.price-card li {
+  margin: 6px 0;
+}
+/* Tighten space AFTER pricing and BEFORE Q&A */
+.pricing-grid {
+  margin-bottom: 36px !important;
+}
+
+/* If your FAQ section is #faq */
+#faq {
+  margin-top: 0 !important;
+  padding-top: 36px !important;
+}
+
+/* FAQ title spacing */
+.faq-title {
+  margin: 0 0 22px !important;
+}
