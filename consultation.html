@@ -53,62 +53,22 @@
 
       <!-- Right: form -->
       <div class="consult-card">
-        <h2 class="card-title">Book Consultation</h2>
-        <p class="card-sub">Share a few details and we’ll reach out within one business day to schedule your call.</p>
+  <h2 class="card-title">Book Consultation</h2>
+  <p class="card-sub">
+    Share a few details and we’ll reach out within one business day to schedule your call.
+  </p>
 
-        <!-- Replace action with your Formspree / GHL form endpoint if you have it -->
-        <form class="consult-form" action="#" method="POST">
-          <label class="field">
-            <span>Full name</span>
-            <input type="text" name="name" placeholder="Full name" required />
-          </label>
+  <div class="ghl-embed">
+    <iframe
+      src="https://links.summitflowcrm.com/widget/form/mDtm3sizk2kkOyB3bAVF"
+      id="inline-mDtm3sizk2kkOyB3bAVF"
+      title="Book Consultation"
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
 
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" placeholder="Email" required />
-          </label>
+<script src="https://links.summitflowcrm.com/js/form_embed.js"></script>
 
-          <label class="field">
-            <span>Mobile phone</span>
-            <input type="tel" name="phone" placeholder="Mobile phone" />
-          </label>
-
-          <label class="field">
-            <span>Are you buying or selling?</span>
-            <select name="intent">
-              <option value="Selling">Selling</option>
-              <option value="Buying">Buying</option>
-              <option value="Both">Both</option>
-            </select>
-          </label>
-
-          <label class="field">
-            <span>State</span>
-            <select name="state">
-              <option value="">Select your state</option>
-              <option>GA</option><option>FL</option><option>AL</option><option>SC</option><option>TN</option>
-              <option>Other</option>
-            </select>
-          </label>
-
-          <button class="btn primary consult-submit" type="submit">Book Consultation</button>
-
-          <p class="form-fineprint">
-            By pressing “Book Consultation”, you agree to be contacted by phone, email, and text.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>© <span id="year"></span> The Summit Group</p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
