@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Consultation | The Summit Group</title>
+
+  <!-- Use your existing stylesheet -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- If you don’t have a global stylesheet, paste the CSS from the section below into a <style> tag -->
+</head>
+<body>
+
+  <!-- Reuse your existing nav markup here (copy from index.html) -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">The Summit Group</a>
+
+      <nav class="nav-links">
+        <a href="./pricing.html">Pricing</a>
+        <a href="./faq.html">FAQ</a>
+        <a class="nav-cta" href="./consultation.html">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="consult-page">
+    <section class="consult-wrap">
+      <!-- Left: text -->
+      <div class="consult-left">
+        <span class="consult-pill">BUYING &amp; SELLING CONSULT</span>
+
+        <h1 class="consult-title">Plan your next move with a dedicated advisor.</h1>
+
+        <p class="consult-sub">
+          In one 30-minute call, we’ll map out your strategy, pricing, and timeline so you know exactly
+          how we help you sell faster while keeping more of your equity.
+        </p>
+
+        <ul class="consult-bullets">
+          <li>A pricing game plan tailored to your home and neighborhood.</li>
+          <li>What happens from prep through closing with our team.</li>
+          <li>Support options based on your goals and timeline.</li>
+        </ul>
+
+        <p class="consult-contact">
+          Questions now? Call <a href="tel:16786999206">(678) 699-9206</a> or email
+          <a href="mailto:info@summitgrouphousewell.com">info@summitgrouphousewell.com</a>.
+        </p>
+      </div>
+
+      <!-- Right: form -->
+      <div class="consult-card">
+        <h2 class="card-title">Book your consultation</h2>
+        <p class="card-sub">Share a few details and we’ll reach out within one business day to schedule your call.</p>
+
+        <!-- Replace action with your Formspree / GHL form endpoint if you have it -->
+        <form class="consult-form" action="#" method="POST">
+          <label class="field">
+            <span>Full name</span>
+            <input type="text" name="name" placeholder="Full name" required />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Email" required />
+          </label>
+
+          <label class="field">
+            <span>Mobile phone</span>
+            <input type="tel" name="phone" placeholder="Mobile phone" />
+          </label>
+
+          <label class="field">
+            <span>Are you buying or selling?</span>
+            <select name="intent">
+              <option value="Selling">Selling</option>
+              <option value="Buying">Buying</option>
+              <option value="Both">Both</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>State</span>
+            <select name="state">
+              <option value="">Select your state</option>
+              <option>GA</option><option>FL</option><option>AL</option><option>SC</option><option>TN</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <button class="btn primary consult-submit" type="submit">Book consultation</button>
+
+          <p class="form-fineprint">
+            By pressing “Book consultation”, you agree to be contacted by phone, email, and text.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> The Summit Group</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
