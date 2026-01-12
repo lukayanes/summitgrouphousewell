@@ -160,3 +160,8 @@ a {
 .faq-title {
   margin-bottom: 32px;
 }
+#faq { padding-top: 96px; }
+@media (max-width: 768px) {
+  #faq { padding-top: 64px; }
+}
+
