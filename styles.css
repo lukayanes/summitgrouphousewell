@@ -845,3 +845,114 @@ a {
   }
 }
 
+/* =========================================
+   HOMEPAGE MOBILE FIX (MAIN PAGE)
+========================================= */
+@media (max-width: 900px) {
+
+  /* --- GLOBAL MOBILE SPACING --- */
+  .container { padding: 0 16px !important; }
+  section { padding-top: 56px; padding-bottom: 56px; }
+
+  /* --- HEADER / NAV CLEANUP --- */
+  .nav {
+    padding: 12px 0 !important;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .logo { height: 92px !important; }
+
+  /* keep nav links from stacking awkwardly */
+  .links {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .links a, .phone { margin-left: 0 !important; }
+
+  /* --- BANNER (SAVE 9000 BAR) --- */
+  .banner {
+    padding: 10px 12px !important;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  /* --- HERO: STACK + TIGHTEN --- */
+  .hero { padding: 40px 0 34px !important; }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    align-items: start;
+  }
+
+  /* headline: avoid weird huge breaks */
+  .hero h1 {
+    font-size: 40px !important;
+    line-height: 1.05 !important;
+    margin: 0 0 12px !important;
+    letter-spacing: -0.2px;
+  }
+
+  .hero h1 br { display: none; } /* prevents awkward breaks on phones */
+
+  .lead {
+    font-size: 16px !important;
+    margin: 0 0 18px !important;
+  }
+
+  /* CTA buttons: centered + stacked nicely */
+  .cta {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin: 0 0 14px !important;
+  }
+
+  .cta a {
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+  .states {
+    margin-top: 10px !important;
+  }
+
+  /* --- HERO IMAGE: FULL WIDTH + NICE RADIUS --- */
+  .sell-right { margin-top: 10px; }
+  .sell-image {
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 18px !important;
+  }
+
+  /* --- FEATURES SECTION: reduce top gap + make title fit --- */
+  .features { padding: 56px 0 !important; }
+
+  .features-title {
+    font-size: 34px !important;
+    margin: 0 auto 28px !important;
+    line-height: 1.1 !important;
+    text-align: center;
+  }
+
+  .features-grid, .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .feature p {
+    max-width: 320px;
+  }
+
+  .features-cta { margin-top: 28px !important; }
+
+  /* --- LISTINGS SECTION: tighten --- */
+  .listings { padding: 56px 0 !important; }
+  .listings-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .listings-image { max-width: 100% !important; }
+}
