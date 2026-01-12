@@ -713,4 +713,65 @@ a {
 .feature-icon img {
   filter: invert(63%) sepia(22%) saturate(747%) hue-rotate(168deg) brightness(95%) contrast(92%);
 }
+/* ===============================
+   GHL FORM EMBED — LOOKS NATIVE
+================================ */
+
+/* nice card already exists in your CSS, just refining */
+.consult-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.card-title {
+  margin: 0 0 6px;
+  font-family: serif;
+  color: #0b1f33;
+}
+
+.card-sub {
+  margin: 0 0 16px;
+  color: #334b5d;
+  line-height: 1.5;
+}
+
+/* Embed container (prevents weird overflow) */
+.ghl-embed {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e6edf3;
+  background: #fff;
+}
+
+/* The iframe itself */
+.ghl-embed iframe {
+  width: 100%;
+  border: 0;
+  display: block;
+  min-height: 760px; /* adjust if your form is taller */
+}
+
+/* Mobile: make sure it doesn't feel cramped */
+@media (max-width: 900px) {
+  .ghl-embed iframe {
+    min-height: 900px;
+  }
+}
+.consult-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .consult-wrap {
+    grid-template-columns: 1fr;
+  }
+}
 
