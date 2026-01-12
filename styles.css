@@ -35,6 +35,38 @@ a {
   padding: 16px 0;
 }
 
+@media (max-width: 900px) {
+
+  /* Stack and center header content */
+  .nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  /* Center the nav links row */
+  .links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .links a,
+  .phone {
+    margin: 0 !important;
+  }
+
+  /* Center the Sign Up button */
+  .nav-cta {
+    margin: 6px auto 0 !important;
+  }
+}
+
+
 .logo {
   height: 140px;
 }
@@ -955,4 +987,20 @@ a {
   .listings { padding: 56px 0 !important; }
   .listings-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
   .listings-image { max-width: 100% !important; }
+}
+
+@media (max-width: 900px) {
+
+  /* Force hero CTA buttons to fit screen */
+  .cta a,
+  .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure CTA container doesn't overflow */
+  .cta {
+    padding: 0 !important;
+  }
 }
