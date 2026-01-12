@@ -164,4 +164,113 @@ a {
 @media (max-width: 768px) {
   #faq { padding-top: 64px; }
 }
+/* Consultation page layout */
+.consult-page {
+  padding: 48px 16px 80px;
+}
+
+.consult-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.consult-left {
+  padding: 8px 6px;
+}
+
+.consult-pill {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.06);
+  margin-bottom: 14px;
+}
+
+.consult-title {
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+
+.consult-sub {
+  margin: 0 0 18px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.consult-bullets {
+  margin: 0 0 18px;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.consult-contact {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.consult-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.card-title {
+  margin: 0 0 6px;
+}
+
+.card-sub {
+  margin: 0 0 18px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.consult-form {
+  display: grid;
+  gap: 12px;
+}
+
+.field span {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.14);
+  outline: none;
+}
+
+.consult-submit {
+  margin-top: 8px;
+  padding: 14px 14px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.form-fineprint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .consult-wrap {
+    grid-template-columns: 1fr;
+  }
+}
 
