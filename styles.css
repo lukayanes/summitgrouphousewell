@@ -393,4 +393,99 @@ a {
     text-align: center;
   }
 }
+/* ===============================
+   HOW IT WORKS (CENTERED + CLEAN)
+================================ */
+.how-works {
+  padding: 96px 0;
+  background: #ffffff; /* keep clean; change to #f6f7f4 if you want off-white */
+}
+
+.how-title {
+  text-align: center;
+  margin: 0 auto 34px;
+  max-width: 760px;
+  font-family: serif;
+  font-size: 40px;
+  line-height: 1.1;
+  color: #0b1f33;
+}
+
+/* Center the whole stack */
+.how-steps {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+/* Make each step feel like a premium card */
+.how-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+  background: #ffffff;
+  border: 1px solid #e6edf3;
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 14px 36px rgba(15,36,51,0.08);
+}
+
+/* Stronger number badge */
+.how-num {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #ffffff;
+  background: #0b1f33; /* navy */
+  border: 1px solid rgba(0,0,0,0.10);
+}
+
+/* Better typography */
+.how-text h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #0b1f33;
+}
+
+.how-text p {
+  margin: 0;
+  color: #334b5d;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* CTA centered under steps */
+.how-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.how-cta .btn,
+.how-cta a {
+  display: inline-block;
+  background: #0b1f33;
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 800;
+}
+
+.how-cta .btn:hover,
+.how-cta a:hover {
+  background: #0f2433;
+}
+
+/* Mobile tuning */
+@media (max-width: 900px) {
+  .how-works { padding: 72px 0; }
+  .how-title { font-size: 34px; margin-bottom: 24px; }
+  .how-step { grid-template-columns: 46px 1fr; padding: 16px 16px; }
+  .how-num { width: 38px; height: 38px; border-radius: 12px; }
+}
 
