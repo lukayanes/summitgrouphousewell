@@ -774,4 +774,74 @@ a {
     grid-template-columns: 1fr;
   }
 }
+/* ===============================
+   CONSULTATION — VERTICAL STACK
+================================ */
+
+/* Force single column */
+.consult-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 48px;
+  max-width: 760px; /* keeps things readable */
+  margin: 0 auto;
+}
+
+/* Center text block */
+.consult-left {
+  max-width: 720px;
+}
+
+/* Improve readability of the copy */
+.consult-left h1,
+.consult-left h2 {
+  font-family: serif;
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: #0b1f33;
+}
+
+.consult-left p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334b5d;
+  margin-bottom: 18px;
+}
+
+.consult-left ul {
+  margin: 0 0 18px;
+  padding-left: 18px;
+}
+
+.consult-left li {
+  margin-bottom: 8px;
+}
+
+/* Card spacing */
+.consult-card {
+  margin-top: 0;
+}
+
+/* Embed height stays sane */
+.ghl-embed iframe {
+  min-height: 760px;
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  .consult-wrap {
+    gap: 36px;
+    padding-top: 32px;
+  }
+
+  .consult-left h1,
+  .consult-left h2 {
+    font-size: 32px;
+  }
+
+  .ghl-embed iframe {
+    min-height: 900px;
+  }
+}
 
