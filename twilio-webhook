@@ -1,0 +1,17 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const { twiml } = require('twilio');
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.post('/twilio-webhook', (req, res) => {
+  const response = new twiml.VoiceResponse();
+  response.say('Hello! This is your Twilio webhook.'); // Or handle OTP logic here
+  res.type('text/xml');
+  res.send(response.toString());
+});
+
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
