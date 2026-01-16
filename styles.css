@@ -1425,3 +1425,63 @@ button {
 .about-hero .nav-logo img{
   filter: brightness(1.6) contrast(1.25) drop-shadow(0 0 22px rgba(255,255,255,0.55)) !important;
 }
+
+/* =========================
+   MOBILE FIX PACK
+   ========================= */
+@media (max-width: 900px){
+  html, body { overflow-x: hidden; }
+
+  /* Make hero truly full width */
+  .top-hero, .about-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
+  /* Stack nav: links row, logo, links row */
+  .top-nav { position: relative !important; padding: 14px 14px !important; }
+
+  .top-nav-inner{
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    gap: 10px !important;
+  }
+
+  .nav-left, .nav-right{
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+  }
+
+  /* CRITICAL: logo cannot be 230px on mobile */
+  .nav-logo img{
+    height: 110px !important;
+    max-height: 110px !important;
+  }
+
+  /* Push hero text below nav so it doesn't collide */
+  .hero-overlay{
+    padding: 170px 14px 60px !important;
+  }
+
+  /* Fix headline cropping */
+  .hero-title{
+    font-size: 44px !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.05 !important;
+    padding: 0 8px !important;
+    max-width: 95vw !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  .hero-sub{
+    font-size: 13px !important;
+    letter-spacing: 1.2px !important;
+    padding: 0 10px !important;
+    max-width: 92vw !important;
+    text-align: center !important;
+  }
+}
