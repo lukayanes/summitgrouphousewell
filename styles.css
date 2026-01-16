@@ -1244,3 +1244,21 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+/* Header for non-home pages (same nav, no hero image) */
+.top-header{
+  background: #0b1f33;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Keep banner readable on dark header */
+.top-header .banner{
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.92);
+}
+
+.top-header .banner a{
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
