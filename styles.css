@@ -1193,3 +1193,10 @@ a {
     padding: 0 !important;
   }
 }
+.btn,
+.nav-cta,
+button {
+  font-family: "Unica One", system-ui;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
