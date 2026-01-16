@@ -1277,7 +1277,7 @@ button {
 }
 
 .nav-logo img{
-  height: 70px; /* keep your size */
+  height: 230px; /* keep your size */
   width: auto;
   display: block;
   filter: brightness(1.25) contrast(1.15) drop-shadow(0 0 18px rgba(255,255,255,0.35));
