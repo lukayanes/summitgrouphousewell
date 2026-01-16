@@ -427,6 +427,28 @@ a {
   letter-spacing: 2px;
 }
 
+/* REVIEWS background photo */
+.reviews{
+  position: relative;
+  padding: 110px 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("./assets/reviews.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Make the heading + cards readable on dark photo */
+.reviews h2{
+  color: #ffffff;
+}
+
+.review{
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
+}
+
 
 /* ===============================
    LISTINGS
