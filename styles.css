@@ -1392,3 +1392,11 @@ button {
     margin-right: auto;
   }
 }
+
+.about-hero .nav-logo img{
+  height: 230px;
+  width: auto;
+  display: block;
+  filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 18px rgba(255,255,255,0.35));
+}
+
