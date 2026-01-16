@@ -420,6 +420,14 @@ a {
   border-radius: 22px;
 }
 
+.reviews h2 {
+  font-size: 58px;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+
 /* ===============================
    LISTINGS
 ================================ */
@@ -627,7 +635,7 @@ a {
   margin: 0 auto 34px;
   max-width: 760px;
   font-family: "Unica One", system-ui;
-  font-size: 40px;
+  font-size: 50px;
   line-height: 1.1;
   color: #0b1f33;
 }
@@ -652,6 +660,20 @@ a {
   padding: 18px 20px;
   box-shadow: 0 14px 36px rgba(15,36,51,0.08);
 }
+
+/* HOW IT WORKS - bigger step text */
+.how-step h3 {
+  font-size: 26px;
+  margin: 0 0 8px;
+  letter-spacing: 1px;
+}
+
+.how-step p {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.55;
+}
+
 
 /* Stronger number badge */
 .how-num {
