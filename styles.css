@@ -346,13 +346,25 @@ a {
 
 .features {
   background: #eef3f7;
-  padding: 80px 0;
+  padding: 110px 0;
+}
+
+.features .container {
+  max-width: 1400px;
+}
+
+.features-title {
+  font-size: 64px;
+  text-align: center;
+  margin: 0 auto 55px;
+  letter-spacing: 2px;
+  line-height: 1.05;
 }
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
 .feature {
@@ -370,6 +382,34 @@ a {
   background: #0b1f33;
   color: #ffffff;
 }
+
+/* Feature card spacing */
+.feature {
+  padding: 34px;
+}
+
+/* Title highlight */
+.feature h3 {
+  display: inline-block;
+  background: rgba(111,174,217,0.22);
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 14px 0 12px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* Paragraph highlight */
+.feature p {
+  display: inline-block;
+  background: rgba(111,174,217,0.14);
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 
 /* ===============================
    REVIEWS
