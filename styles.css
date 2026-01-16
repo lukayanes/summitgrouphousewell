@@ -1,3 +1,154 @@
+/* ===== TOP HERO (GBRS-style) ===== */
+
+/* Font import (same vibe: condensed uppercase heading + clean body) */
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Karla:wght@400;600;700&display=swap');
+
+:root{
+  --hero-overlay: rgba(0,0,0,0.45);
+  --nav-text: rgba(255,255,255,0.85);
+  --nav-text-strong: #ffffff;
+}
+
+/* Full-bleed hero with background image */
+.top-hero{
+  min-height: 92vh;
+  position: relative;
+  background:
+    linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("./assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Nav wrapper */
+.top-nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 26px 24px;
+}
+
+/* 3-column nav: left links, center logo, right links/icons */
+.top-nav-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+/* links */
+.nav-left,
+.nav-right{
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav-left{
+  justify-content: flex-end;
+}
+
+.nav-right{
+  justify-content: flex-start;
+}
+
+.nav-left a,
+.nav-right a{
+  font-family: "Unica One", system-ui;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: var(--nav-text);
+}
+
+.nav-left a:hover,
+.nav-right a:hover{
+  color: var(--nav-text-strong);
+}
+
+/* centered logo */
+.nav-logo img{
+  height: 56px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+}
+
+/* icon buttons */
+.icon-btn{
+  background: transparent;
+  border: 0;
+  color: var(--nav-text);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 10px;
+}
+
+.icon-btn:hover{
+  color: var(--nav-text-strong);
+}
+
+/* Centered hero text */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 120px 18px 60px;
+}
+
+.hero-content{
+  max-width: 980px;
+}
+
+.hero-title{
+  font-family: "Unica One", system-ui;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: clamp(44px, 6vw, 86px);
+  line-height: 1.02;
+  margin: 0 0 14px;
+  color: #ffffff;
+  text-shadow: 0 18px 45px rgba(0,0,0,0.65);
+}
+
+.hero-sub{
+  font-family: "Karla", system-ui;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+}
+
+/* Mobile: stack nav rows but keep logo centered */
+@media (max-width: 900px){
+  .top-nav-inner{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 14px;
+  }
+
+  .nav-left, .nav-right{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .nav-logo img{
+    height: 52px;
+  }
+
+  .hero-overlay{
+    padding-top: 150px;
+  }
+}
 /* ===============================
    GLOBAL
 ================================ */
