@@ -1425,16 +1425,3 @@ button {
 .about-hero .nav-logo img{
   filter: brightness(1.6) contrast(1.25) drop-shadow(0 0 22px rgba(255,255,255,0.55)) !important;
 }
-
-/* Optional: subtle light badge behind logo (About page only) */
-.about-hero .nav-logo{
-  background: rgba(255,255,255,0.12);
-  border-radius: 999px;
-  width: 82px;
-  height: 82px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-  backdrop-filter: blur(6px);
-}
