@@ -1267,3 +1267,11 @@ button {
   position: relative;
 }
 
+/* Remove hero background image on non-home pages */
+.top-header{
+  background: #0b1f33 !important;
+}
+
+.top-header{
+  background-image: none !important;
+}
