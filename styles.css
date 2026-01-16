@@ -157,9 +157,15 @@
 ================================ */
 body {
   margin: 0;
-  font-family: system-ui;
+  font-family: "Karla", system-ui;
   background: #f6f7f4;
   color: #0f2433;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Unica One", system-ui;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Remove default link styling */
@@ -268,8 +274,7 @@ a {
 }
 
 .hero h1 {
-  font-family: serif;
-  font-size: 48px;
+  font-family: "Unica One", system-ui;
 }
 
 .hero h1 span {
@@ -430,7 +435,7 @@ a {
 }
 
 .pricing-title {
-  font-family: serif;
+  font-family: "Unica One", system-ui;
   font-size: 44px;
   text-align: center;
   margin: 30px auto 34px;
@@ -460,7 +465,7 @@ a {
 }
 
 .plan {
-  font-family: serif;
+  font-family: "Unica One", system-ui;
   font-size: 26px;
 }
 
@@ -477,7 +482,7 @@ a {
 }
 
 .faq-title {
-  font-family: serif;
+  font-family: "Unica One", system-ui;
   font-size: 46px;
   text-align: center;
   margin-bottom: 32px;
@@ -591,7 +596,7 @@ a {
   text-align: center;
   margin: 0 auto 34px;
   max-width: 760px;
-  font-family: serif;
+  font-family: "Unica One", system-ui;
   font-size: 40px;
   line-height: 1.1;
   color: #0b1f33;
@@ -822,7 +827,7 @@ a {
 }
 
 .features-title {
-  font-family: serif;
+  font-family: "Unica One", system-ui;
   font-size: 44px;
   text-align: center;
   margin: 0 auto 56px;
@@ -857,7 +862,7 @@ a {
 }
 
 .feature h3 {
-  font-family: serif;
+  font-family: "Unica One", system-ui;
   font-size: 20px;
   margin: 0 0 10px;
   color: #0b1f33;
@@ -914,7 +919,7 @@ a {
 
 .card-title {
   margin: 0 0 6px;
-  font-family: serif;
+  font-family: "Unica One", system-ui;
   color: #0b1f33;
 }
 
@@ -981,7 +986,7 @@ a {
 /* Improve readability of the copy */
 .consult-left h1,
 .consult-left h2 {
-  font-family: serif;
+  font-family: "Unica One", system-ui;
   font-size: 40px;
   line-height: 1.1;
   margin-bottom: 16px;
