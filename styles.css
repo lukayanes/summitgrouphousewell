@@ -1400,3 +1400,24 @@ button {
   filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 18px rgba(255,255,255,0.35));
 }
 
+/* FIX: Hero showing only half width on mobile */
+@media (max-width: 900px){
+  html, body{
+    overflow-x: hidden;
+  }
+
+  .top-hero,
+  .about-hero,
+  .hero-overlay,
+  .hero-content{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .top-hero{
+    min-height: 92vh;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
