@@ -1618,3 +1618,66 @@ button {
     text-align: center !important;
   }
 }
+
+/* ================================
+   HERO LOAD ANIMATION (GBRS STYLE)
+   ================================ */
+
+/* HERO BACKGROUND QUICK ZOOM */
+.top-hero{
+  position: relative;
+  overflow: hidden;
+}
+
+/* If your hero uses a background-image on .top-hero,
+   we fake the zoom by scaling the whole header slightly */
+.top-hero{
+  transform: scale(1.03);
+  transition: transform 700ms ease;
+  will-change: transform;
+}
+
+html.is-loaded .top-hero{
+  transform: scale(1);
+}
+
+/* TEXT START STATE */
+.hero-title,
+.hero-sub{
+  opacity: 0;
+  transform: translateY(22px); /* slide up from below */
+  will-change: transform, opacity;
+}
+
+/* Title comes in first */
+.hero-title{
+  transition: transform 550ms ease, opacity 550ms ease;
+  transition-delay: 120ms;
+}
+
+/* Subs come after title (staggered) */
+.hero-sub{
+  transition: transform 550ms ease, opacity 550ms ease;
+}
+
+.hero-sub:nth-child(1){ transition-delay: 320ms; }
+.hero-sub:nth-child(2){ transition-delay: 450ms; }
+.hero-sub:nth-child(3){ transition-delay: 580ms; }
+
+/* LOADED STATE */
+html.is-loaded .hero-title,
+html.is-loaded .hero-sub{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce){
+  .top-hero,
+  .hero-title,
+  .hero-sub{
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
