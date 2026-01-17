@@ -1593,3 +1593,7 @@ button {
     padding-right: 0 !important;
   }
 }
+
+@media (max-width: 900px){
+  .top-hero{ overflow-x: hidden; }
+}
