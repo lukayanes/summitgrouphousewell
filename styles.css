@@ -2118,3 +2118,21 @@ html.is-loaded .top-hero::before{
     padding-top: 320px !important; /* tweak 220–320 */
   }
 }
+
+/* =========================================
+   MATCH LOGO SIZE ON PRICING + CONSULT PAGES
+========================================= */
+
+/* Desktop */
+.top-header .nav-logo img{
+  height: 170px !important; /* match home/about */
+  width: auto !important;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .top-header .nav-logo img{
+    height: 110px !important; /* match home/about mobile */
+    width: auto !important;
+  }
+}
