@@ -1286,15 +1286,49 @@ button {
 /* ===============================
    ABOUT PAGE HERO
 ================================ */
+/* ===============================
+   ABOUT HERO (background layer)
+================================ */
 .about-hero{
+  min-height: 70vh;
+}
+
+/* Background image goes on the layer now */
+.about-hero .hero-bg{
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url("./assets/about-hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 70vh;
 }
+
+/* ABOUT PAGE: don't scale the entire header */
+.about-hero{
+  transform: none !important;
+}
+
+/* ABOUT PAGE: dramatic zoom only on the bg layer */
+.about-hero .hero-bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  transform: scale(1.22);
+  transition: transform 1100ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+}
+
+/* ensure nav/text sit above bg */
+.about-hero > *:not(.hero-bg){
+  position: relative;
+  z-index: 1;
+}
+
+html.is-loaded .about-hero .hero-bg{
+  transform: scale(1);
+}
+
 
 /* ===============================
    ABOUT INTRO
@@ -1685,15 +1719,5 @@ html.is-loaded .hero-sub{
     transform: none !important;
     opacity: 1 !important;
   }
-}
-
-.about-hero{
-  background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("./assets/about-hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 70vh;
 }
 
