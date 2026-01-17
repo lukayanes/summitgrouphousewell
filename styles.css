@@ -1723,3 +1723,22 @@ html.is-loaded .hero-sub{
   padding-top: 190px !important;        /* tweak: 190–240 based on taste */
   padding-bottom: 60px !important;
 }
+
+/* MOBILE: push the subcopy block down + make it readable */
+@media (max-width: 900px){
+
+  /* Move ONLY the paragraph block down (not the H1) */
+  .top-hero:not(.about-hero) .hero-sub:first-of-type{
+    margin-top: 140px !important; /* tweak: 110–180px until it lines up with water */
+  }
+
+  /* Readability: add a soft backdrop behind the subcopy lines */
+  .top-hero:not(.about-hero) .hero-sub{
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 6px 0 !important;
+    background: rgba(0,0,0,0.35);
+    border-radius: 10px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.65);
+  }
+}
