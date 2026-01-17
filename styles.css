@@ -1641,19 +1641,6 @@ html.is-loaded .about-hero .hero-bg{
   overflow: hidden;
 }
 
-/* If your hero uses a background-image on .top-hero,
-   we fake the zoom by scaling the whole header slightly */
-.top-hero{
-  transform: scale(1.12);          /* was 1.03 */
-  transition: transform 900ms ease; /* slightly longer feels smoother */
-  will-change: transform;
-}
-
-html.is-loaded .top-hero{
-  transform: scale(1);
-}
-
-
 html.is-loaded .top-hero{
   transform: scale(1);
 }
@@ -1941,3 +1928,51 @@ html.is-loaded .hero-sub{
     text-align: center !important;
   }
 }
+
+/* =========================================
+   HERO ZOOM (RIGHT WAY): zoom ONLY the background
+   Keeps logo + text perfectly centered
+========================================= */
+.top-hero{
+  position: relative;
+  overflow: hidden;
+  transform: none !important;   /* NEVER scale the whole header */
+}
+
+/* Create a background layer using the same backgrounds you already set */
+.top-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  /* Inherit your existing background from .top-hero / .about-hero */
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.18);  /* dramatic start */
+  transition: transform 1100ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+}
+
+/* Make sure nav + overlay sit above the background layer */
+.top-hero > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Animate in */
+html.is-loaded .top-hero::before{
+  transform: scale(1);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .top-hero::before{
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
