@@ -1,13 +1,14 @@
 /* =========================================================
-   HOUSEWELL / SUMMIT — CLEAN CSS (single source of truth)
+   CLEANED CSS — SINGLE SOURCE OF TRUTH
+   Fixes: mobile drift, off-center hero title/nav/banner,
+   removes duplicate/conflicting packs.
    ========================================================= */
 
-/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Karla:wght@400;600;700&display=swap');
 
 :root{
   --navy: #0b1f33;
-  --navy-2: #0f2433;
+  --navy2: #0f2433;
   --sky: #6FAED9;
   --bg: #f6f7f4;
   --section: #eef3f7;
@@ -20,14 +21,14 @@
 }
 
 /* ===============================
-   GLOBAL
+   GLOBAL / RESET
 ================================ */
 *{ box-sizing: border-box; }
 
 html, body{
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* kills mobile drift from tiny overflows */
+  overflow-x: hidden; /* prevents the “shifted right” mobile drift */
 }
 
 body{
@@ -43,10 +44,7 @@ h1,h2,h3,h4{
   margin: 0;
 }
 
-a{
-  color: inherit;
-  text-decoration: none;
-}
+a{ color: inherit; text-decoration: none; }
 
 .container{
   max-width: 1200px;
@@ -73,28 +71,28 @@ button{
   border: 1px solid rgba(0,0,0,0.12);
 }
 
-.btn.primary{
-  background: var(--navy);
-  color: #fff;
-}
+.btn.primary{ background: var(--navy); color: #fff; }
+.btn.primary:hover{ background: var(--navy2); }
+.btn.ghost{ background: transparent; border: 1px solid #cfcfcf; }
 
-.btn.primary:hover{ background: var(--navy-2); }
-
-.btn.ghost{
-  background: transparent;
-  border: 1px solid #cfcfcf;
+/* ===============================
+   BANNER
+================================ */
+.banner{
+  text-align: center;
+  padding: 10px 12px;
+  background: rgba(111,174,217,0.15);
 }
 
 /* ===============================
-   TOP HERO (GBRS-style) — SINGLE HERO SYSTEM
-   IMPORTANT: do NOT use .hero/.hero-grid homepage hero anymore.
+   TOP HERO (GBRS STYLE) — HOME
+   IMPORTANT: do not scale .top-hero itself
 ================================ */
 .top-hero{
   min-height: 92vh;
   position: relative;
   overflow: hidden;
 
-  /* Background lives here, and the zoom animates via ::before */
   background:
     linear-gradient(var(--hero-overlay), var(--hero-overlay)),
     url("./assets/hero.jpg");
@@ -102,10 +100,10 @@ button{
   background-position: center;
   background-repeat: no-repeat;
 
-  transform: none !important; /* never scale the whole hero */
+  transform: none !important; /* kills old drift issues */
 }
 
-/* Background zoom layer */
+/* Background zoom layer (only background scales, not content) */
 .top-hero::before{
   content:"";
   position:absolute;
@@ -122,22 +120,20 @@ button{
   will-change: transform;
 }
 
-/* Ensure nav + overlay sit above bg */
+/* Nav + text sit above bg */
 .top-hero > *{
   position: relative;
   z-index: 1;
 }
 
-/* Animate in when html gets .is-loaded */
 html.is-loaded .top-hero::before{ transform: scale(1); }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   .top-hero::before{ transition:none !important; transform:none !important; }
 }
 
 /* ===============================
-   TOP NAV (inside .top-hero)
+   TOP NAV
 ================================ */
 .top-nav{
   position: absolute;
@@ -177,6 +173,7 @@ html.is-loaded .top-hero::before{ transform: scale(1); }
 .nav-left a:hover,
 .nav-right a:hover{ color: var(--nav-text-strong); }
 
+.nav-logo{ display:flex; justify-content:center; align-items:center; }
 .nav-logo img{
   height: 170px;
   width: auto;
@@ -185,24 +182,27 @@ html.is-loaded .top-hero::before{ transform: scale(1); }
 }
 
 /* ===============================
-   HERO OVERLAY TEXT
+   HERO OVERLAY + TEXT
 ================================ */
 .hero-overlay{
   position: absolute;
   inset: 0;
+
   display: grid;
   place-items: center;
   text-align: center;
 
-  /* key spacing so text never collides with the logo */
+  /* pushed down so it never collides with the logo */
   padding: 300px 18px 70px;
 }
 
 .hero-content{
   width: 100%;
   max-width: 980px;
+  margin: 0 auto;
 }
 
+/* CRITICAL: do NOT allow nowrap on mobile */
 .hero-title{
   font-family: "Unica One", system-ui;
   text-transform: uppercase;
@@ -210,13 +210,13 @@ html.is-loaded .top-hero::before{ transform: scale(1); }
   font-size: clamp(52px, 7vw, 110px);
   line-height: 1.02;
   margin: 0 0 14px;
-  color: #fff;
+  color: #ffffff;
   text-shadow: 0 18px 45px rgba(0,0,0,0.65);
 
-  /* Prevent clipping on mobile */
-  white-space: normal;
-  overflow-wrap: anywhere;
+  white-space: normal;          /* <-- fixes drift */
+  overflow-wrap: anywhere;      /* <-- prevents clipping */
   word-break: break-word;
+  text-align: center;
 }
 
 .hero-sub{
@@ -226,26 +226,20 @@ html.is-loaded .top-hero::before{ transform: scale(1); }
   text-transform: uppercase;
   font-size: 20px;
   color: rgba(255,255,255,0.85);
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 920px;
 }
 
-/* hero text entrance */
-.hero-title,
-.hero-sub{
+/* Simple text entrance */
+.hero-title, .hero-sub{
   opacity: 0;
-  transform: translateY(22px);
+  transform: translateY(18px);
   will-change: transform, opacity;
 }
 
-.hero-title{
-  transition: transform 550ms ease, opacity 550ms ease;
-  transition-delay: 120ms;
-}
-
-.hero-sub{
-  transition: transform 550ms ease, opacity 550ms ease;
-  transition-delay: 340ms;
-}
+.hero-title{ transition: transform 550ms ease, opacity 550ms ease; transition-delay: 120ms; }
+.hero-sub{ transition: transform 550ms ease, opacity 550ms ease; transition-delay: 340ms; }
 
 html.is-loaded .hero-title,
 html.is-loaded .hero-sub{
@@ -254,33 +248,11 @@ html.is-loaded .hero-sub{
 }
 
 /* ===============================
-   NON-HOME PAGES: DARK HEADER (no hero image)
-================================ */
-.top-header{
-  background: var(--navy);
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-  background-image: none !important;
-}
-
-.top-header .top-nav{ position: relative; }
-.top-header .banner{
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.92);
-}
-
-.top-header .banner a{
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* ===============================
    ABOUT HERO (same system, different background)
    Use: <section class="top-hero about-hero">
 ================================ */
 .about-hero{
   min-height: 70vh;
-  /* override the background image */
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url("./assets/about-hero.jpg");
@@ -289,61 +261,28 @@ html.is-loaded .hero-sub{
   background-repeat: no-repeat;
 }
 
-/* about page: start text higher (not perfectly centered) */
 .about-hero .hero-overlay{
   place-items: start center;
   padding-top: 190px;
   padding-bottom: 60px;
 }
 
-/* make logo pop on about */
 .about-hero .nav-logo img{
   filter: brightness(1.6) contrast(1.25) drop-shadow(0 0 22px rgba(255,255,255,0.55));
 }
 
 /* ===============================
-   HEADER / NAV (older pages that use .header/.nav)
-   Keep if you still have non-hero pages using this.
+   NON-HOME DARK HEADER (no hero image)
 ================================ */
-.header{
-  border-bottom: 1px solid #e0e0e0;
-  background: #fff;
-}
-
-.nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 0;
-}
-
-.logo{ height: 140px; }
-
-.links a,
-.phone{
-  margin-left: 18px;
-  font-weight: 600;
-}
-
-.nav-cta{
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 12px;
+.top-header{
   background: var(--navy);
-  color: #fff;
-  font-weight: 700;
-  border: 1px solid rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  background-image: none !important;
 }
-
-.nav-cta:hover{ background: var(--navy-2); }
-
-/* ===============================
-   BANNER
-================================ */
-.banner{
-  text-align: center;
-  padding: 10px;
-  background: rgba(111,174,217,0.15);
+.top-header .top-nav{ position: relative; }
+.top-header .banner{
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.92);
 }
 
 /* ===============================
@@ -369,23 +308,19 @@ html.is-loaded .hero-sub{
   align-items: start;
 }
 
-.feature{
-  text-align: center;
-}
+.feature{ text-align: center; }
 
 .feature-icon{
   width: 56px;
   height: 56px;
   margin: 0 auto 16px;
-  color: var(--sky);
 }
 
+/* icon tint */
 .feature-icon img{
   width: 100%;
   height: 100%;
   display: block;
-
-  /* Force SVG icons to light blue */
   filter: invert(63%) sepia(22%) saturate(747%) hue-rotate(168deg) brightness(95%) contrast(92%);
 }
 
@@ -403,12 +338,7 @@ html.is-loaded .hero-sub{
   margin: 0 auto;
 }
 
-.features-cta{
-  display: flex;
-  justify-content: center;
-  margin-top: 56px;
-}
-
+/* Reviews */
 .reviews{
   position: relative;
   padding: 110px 0;
@@ -425,7 +355,7 @@ html.is-loaded .hero-sub{
   text-align: center;
   margin: 0 0 40px;
   letter-spacing: 2px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .review-grid{
@@ -503,7 +433,7 @@ html.is-loaded .hero-sub{
 }
 
 .price-card{
-  background: #fff;
+  background: #ffffff;
   padding: 28px 28px 30px;
   border-radius: 18px;
   border: 1px solid #e6edf3;
@@ -515,25 +445,10 @@ html.is-loaded .hero-sub{
   box-shadow: 0 22px 55px rgba(15,36,51,0.10);
 }
 
-.price-card .plan{ margin: 0 0 8px; font-size: 26px; }
-.price-card .plan-sub{ margin: 0 0 10px; }
-.price-card .plan-desc{ margin: 0 0 14px; }
-
-.plan-btn{
-  margin: 10px 0 14px;
-  display: inline-block;
-}
-
-.fineprint{
-  font-size: 12px;
-  color: #5a6f82;
-}
-
 /* ===============================
    FAQ
 ================================ */
 #faq{
-  margin-top: 0;
   padding-top: 36px;
   padding-bottom: 72px;
 }
@@ -549,9 +464,7 @@ html.is-loaded .hero-sub{
   margin: 0 0 22px;
 }
 
-.faq-list{
-  border-top: 1px solid #e6edf3;
-}
+.faq-list{ border-top: 1px solid #e6edf3; }
 
 .faq-item{
   border-bottom: 1px solid #e6edf3;
@@ -581,39 +494,28 @@ html.is-loaded .hero-sub{
   padding: 48px 16px 80px;
 }
 
+/* single column stack by default */
 .consult-wrap{
   max-width: 760px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 48px;
-  align-items: stretch;
 }
 
 .consult-card{
-  background: #fff;
+  background: #ffffff;
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 16px;
   padding: 22px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
-.card-title{
-  margin: 0 0 6px;
-  color: var(--navy);
-}
-
-.card-sub{
-  margin: 0 0 16px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
 .ghl-embed{
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e6edf3;
-  background: #fff;
+  background: #ffffff;
 }
 
 .ghl-embed iframe{
@@ -624,84 +526,74 @@ html.is-loaded .hero-sub{
 }
 
 /* ===============================
-   RESPONSIVE
+   MOBILE
 ================================ */
 @media (max-width: 900px){
 
   .container{ padding: 0 16px; }
 
-  /* Top nav becomes centered stack */
-  .top-nav{
-    padding: 14px 12px;
-  }
+  /* NAV: true centered stack */
+  .top-nav{ padding: 14px 12px; }
 
   .top-nav-inner{
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 10px;
-    max-width: 520px;
   }
 
   .nav-left, .nav-right{
+    width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     gap: 14px;
+    text-align: center;
   }
 
-  .nav-logo img{
-    height: 110px;
-  }
+  .nav-logo img{ height: 110px; }
 
-  /* Hero text spacing below stacked nav/logo */
+  /* HERO: lock center + prevent any right shift */
   .hero-overlay{
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     padding: 250px 14px 70px;
+  }
+
+  .hero-content{
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 16px;
   }
 
   .hero-title{
     font-size: 42px;
     letter-spacing: 1px;
-    padding: 0 18px;
     max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .hero-sub{
     font-size: 13px;
     letter-spacing: 1px;
     max-width: 92vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
-  /* Sections stack */
+  /* Stack grids */
   .features-grid{ grid-template-columns: 1fr; gap: 40px; }
   .review-grid{ grid-template-columns: 1fr; }
   .listings-grid{ grid-template-columns: 1fr; gap: 18px; text-align: center; }
   .listings-image{ max-width: 100%; }
-
-  .pricing-grid{ grid-template-columns: 1fr; margin-bottom: 28px; }
+  .pricing-grid{ grid-template-columns: 1fr; }
 
   .ghl-embed iframe{ min-height: 900px; }
-
-  /* Older .header/.nav mobile (if still used) */
-  .nav{
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 0;
-  }
-
-  .links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .links a, .phone{ margin-left: 0; }
-  .nav-cta{ margin: 6px auto 0; }
 }
-
-/* Small helper */
-.mobile-break{ display:none; }
-@media (max-width: 900px){ .mobile-break{ display:inline; } }
