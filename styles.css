@@ -1566,3 +1566,12 @@ button {
     text-align: center !important;
   }
 }
+
+@media (max-width: 900px){
+  .hero-title, .hero-sub{
+    transform: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
