@@ -1632,10 +1632,15 @@ button {
 /* If your hero uses a background-image on .top-hero,
    we fake the zoom by scaling the whole header slightly */
 .top-hero{
-  transform: scale(1.03);
-  transition: transform 700ms ease;
+  transform: scale(1.12);          /* was 1.03 */
+  transition: transform 900ms ease; /* slightly longer feels smoother */
   will-change: transform;
 }
+
+html.is-loaded .top-hero{
+  transform: scale(1);
+}
+
 
 html.is-loaded .top-hero{
   transform: scale(1);
