@@ -1732,3 +1732,66 @@ html.is-loaded .hero-sub{
     margin-top: 200px !important; /* tweak: 110–180px until it lines up with water */
   }
 }
+
+
+/* =========================================
+   MOBILE HERO: HARD CENTER EVERYTHING
+   (house image + title + paragraph)
+========================================= */
+@media (max-width: 900px){
+
+  html, body{
+    overflow-x: hidden !important;
+  }
+
+  /* Make the hero full width and centered */
+  .top-hero{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+
+  /* Force overlay to be true center */
+  .hero-overlay{
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    place-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Force content to center and REMOVE all transforms */
+  .hero-content{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    position: relative !important;
+  }
+
+  /* Center the text blocks */
+  .hero-title,
+  .hero-sub{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  /* Remove any weird offsets */
+  .hero-title,
+  .hero-sub{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
