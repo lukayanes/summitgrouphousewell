@@ -116,7 +116,6 @@
   margin: 0 0 14px;
   color: #ffffff;
   text-shadow: 0 18px 45px rgba(0,0,0,0.65);
-  white-space: nowrap;
 }
 
 .hero-sub{
@@ -1454,7 +1453,7 @@ html.is-loaded .about-hero .hero-bg{
     max-width: 100% !important;
   }
 
-  .top-hero{
+  
     min-height: 92vh;
     background-size: cover !important;
     background-position: center !important;
@@ -1627,8 +1626,6 @@ html.is-loaded .about-hero .hero-bg{
     text-align: center !important;
   }
 }
-
-.top-hero{ transform: scale(1.12); }
 
 
 /* ================================
@@ -1973,6 +1970,74 @@ html.is-loaded .top-hero::before{
   .top-hero::before{
     transition: none !important;
     transform: none !important;
+  }
+}
+
+/* =========================================
+   HOME HERO MOBILE CENTER PATCH (SAFE)
+   - does NOT touch .housewell-banner
+   - does NOT touch pricing/consult brightness
+   - does NOT touch features chips or how-it-works
+========================================= */
+@media (max-width: 900px){
+
+  /* Kill any leftover horizontal drift */
+  html, body { overflow-x: hidden; }
+
+  /* Ensure nav stack is truly centered */
+  .top-nav{
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+
+  .top-nav-inner{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    justify-items: center !important;
+  }
+
+  .nav-left, .nav-right{
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Center the hero overlay + content block */
+  .top-hero .hero-overlay{
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .top-hero .hero-content{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  /* Critical: allow title to wrap and stay centered */
+  .top-hero .hero-title{
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    max-width: 95vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .top-hero .hero-sub{
+    max-width: 92vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
   }
 }
 
