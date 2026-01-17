@@ -2101,6 +2101,6 @@ html.is-loaded .top-hero::before{
 
 @media (max-width: 900px){
   .about-hero .hero-overlay{
-    padding-top: 190px !important;        /* same on mobile */
+    padding-top: 240px !important;        /* same on mobile */
   }
 }
