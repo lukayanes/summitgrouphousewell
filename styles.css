@@ -2063,3 +2063,29 @@ html.is-loaded .top-hero::before{
 .hero-overlay a{
   pointer-events: auto !important;
 }
+
+/* ================================
+   FIX: PRICING + CONSULT PAGES LOOKING LIKE HOME HERO
+   Requires <header class="top-header"> on those pages
+================================ */
+.top-header{
+  background: #0b1f33 !important;
+  background-image: none !important;
+}
+
+.top-header .top-nav{
+  position: relative !important;  /* stop absolute hero nav */
+  padding: 18px 16px !important;
+}
+
+.top-header .hero-overlay{
+  display: none !important;       /* prevent hero spacing from applying */
+}
+
+/* Mobile: keep logo sane */
+@media (max-width: 900px){
+  .top-header .nav-logo img{
+    height: 92px !important;
+  }
+}
+
