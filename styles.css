@@ -2089,3 +2089,18 @@ html.is-loaded .top-hero::before{
   }
 }
 
+/* =========================================
+   ABOUT HERO: put title back where it was
+   (wins over the 58 other padding rules)
+========================================= */
+.about-hero .hero-overlay{
+  place-items: center !important;         /* puts it back in the middle */
+  padding-top: 190px !important;          /* adjust to your old sweet spot */
+  padding-bottom: 60px !important;
+}
+
+@media (max-width: 900px){
+  .about-hero .hero-overlay{
+    padding-top: 190px !important;        /* same on mobile */
+  }
+}
