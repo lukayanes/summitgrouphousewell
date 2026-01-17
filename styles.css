@@ -1721,3 +1721,21 @@ html.is-loaded .hero-sub{
   }
 }
 
+/* =========================
+   HERO SPACING FIXES
+   ========================= */
+
+/* HOME page: push hero text below nav/logo */
+.top-hero:not(.about-hero) .hero-overlay{
+  padding-top: 300px !important;  /* was 120px; fixes headline hitting logo */
+  padding-bottom: 70px !important;
+}
+
+/* Mobile HOME: keep it below stacked nav/logo */
+@media (max-width: 900px){
+  .top-hero:not(.about-hero) .hero-overlay{
+    padding-top: 260px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
