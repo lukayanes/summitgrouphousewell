@@ -2115,6 +2115,6 @@ html.is-loaded .top-hero::before{
 
 @media (max-width: 900px){
   .top-hero.about-hero .hero-overlay{
-    padding-top: 240px !important; /* tweak 220–320 */
+    padding-top: 320px !important; /* tweak 220–320 */
   }
 }
