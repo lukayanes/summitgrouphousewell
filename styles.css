@@ -1729,6 +1729,6 @@ html.is-loaded .hero-sub{
 
   /* Move ONLY the paragraph block down (not the H1) */
   .top-hero:not(.about-hero) .hero-sub:first-of-type{
-    margin-top: 170px !important; /* tweak: 110–180px until it lines up with water */
+    margin-top: 200px !important; /* tweak: 110–180px until it lines up with water */
   }
 }
