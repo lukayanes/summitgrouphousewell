@@ -73,7 +73,7 @@
 
 /* centered  */
 .nav-logo img{
-  height: 180px;
+  height: 170px;
   width: auto;
   display: block;
   filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
@@ -1277,7 +1277,7 @@ button {
 }
 
 .nav-logo img{
-  height: 180px; /* keep your size */
+  height: 170px; /* keep your size */
   width: auto;
   display: block;
   filter: brightness(1.25) contrast(1.15) drop-shadow(0 0 18px rgba(255,255,255,0.35));
@@ -1434,7 +1434,7 @@ html.is-loaded .about-hero .hero-bg{
 }
 
 .about-hero .nav-logo img{
-  height: 180px;
+  height: 170px;
   width: auto;
   display: block;
   filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 18px rgba(255,255,255,0.35));
