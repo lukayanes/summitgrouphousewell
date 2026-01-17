@@ -2104,3 +2104,17 @@ html.is-loaded .top-hero::before{
     padding-top: 240px !important;        /* same on mobile */
   }
 }
+
+
+/* ABOUT page: control where the title sits */
+.top-hero.about-hero .hero-overlay{
+  place-items: center !important;
+  padding-top: 240px !important;   /* increase = moves DOWN */
+  padding-bottom: 60px !important;
+}
+
+@media (max-width: 900px){
+  .top-hero.about-hero .hero-overlay{
+    padding-top: 240px !important; /* tweak 220–320 */
+  }
+}
