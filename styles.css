@@ -1833,3 +1833,9 @@ html.is-loaded .hero-sub{
     letter-spacing: 1px !important;
   }
 }
+
+.mobile-break{ display:none; }
+
+@media (max-width: 900px){
+  .mobile-break{ display:inline; }
+}
