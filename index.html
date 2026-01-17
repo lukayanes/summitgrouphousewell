@@ -7,6 +7,7 @@
   <meta name="description" content="The modern way to sell real estate. Full service, low fees. Powered by Housewell." />
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
 
 <header class="top-hero">
@@ -34,11 +35,15 @@
   </nav>
 
   <div class="hero-overlay">
-    <div class="hero-content">
+    <div class="hero-content hero-animate">
       <h1 class="hero-title">SELL SMARTER, KEEP MORE</h1>
-      <p class="hero-sub">THE MODERN WAY TO SELL REAL ESTATE.</p>
-      <p class="hero-sub">SUPER SIMPLE. LOW FEES. FULL SERVICE AGENT FOR A FRACTION OF THE COST.</p>
-      <p class="hero-sub">NOW SERVING FLORIDA.</p>
+
+      <!-- Wrap subs so we can stagger them -->
+      <div class="hero-subs">
+        <p class="hero-sub">THE MODERN WAY TO SELL REAL ESTATE.</p>
+        <p class="hero-sub">SUPER SIMPLE. LOW FEES. FULL SERVICE AGENT FOR A FRACTION OF THE COST.</p>
+        <p class="hero-sub">NOW SERVING FLORIDA.</p>
+      </div>
     </div>
   </div>
 </header>
@@ -112,7 +117,7 @@
     <div class="review-grid">
       <div class="review">
         <h4>5 properties sold · $24k saved</h4>
-        <p>“One of the easiest and most cost‑effective ways to sell.”</p>
+        <p>“One of the easiest and most cost-effective ways to sell.”</p>
       </div>
       <div class="review">
         <h4>2 properties sold · $11k saved</h4>
@@ -196,6 +201,13 @@
     <p>© 2026 The Summit Group · Powered by Housewell</p>
   </div>
 </footer>
+
+<!-- Page-load animation trigger -->
+<script>
+  requestAnimationFrame(() => {
+    document.documentElement.classList.add("is-loaded");
+  });
+</script>
 
 </body>
 </html>
