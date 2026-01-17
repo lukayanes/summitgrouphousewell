@@ -1575,3 +1575,21 @@ button {
   }
 }
 
+@media (max-width: 900px){
+  /* HOME hero: center text perfectly */
+  .top-hero:not(.about-hero) .hero-content{
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .top-hero:not(.about-hero) .hero-title,
+  .top-hero:not(.about-hero) .hero-sub{
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
