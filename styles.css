@@ -1720,6 +1720,6 @@ html.is-loaded .hero-sub{
 /* ABOUT page: put title higher (not vertically centered) */
 .about-hero .hero-overlay{
   place-items: start center !important; /* instead of center center */
-  padding-top: 220px !important;        /* tweak: 190–240 based on taste */
+  padding-top: 160px !important;        /* tweak: 190–240 based on taste */
   padding-bottom: 60px !important;
 }
