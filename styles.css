@@ -1840,19 +1840,20 @@ html.is-loaded .hero-sub{
   .mobile-break{ display:inline; }
 }
 
-/* Banner under hero (below water) */
+/* Small banner under hero (same bg as next section) */
 .housewell-banner{
   width: 100%;
-  background: #0b1f33;          /* navy strip */
+  background: #eef3f7; /* SAME as your next section */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px 16px;
+  padding: 14px 16px;  /* small height */
 }
 
 .housewell-banner img{
-  max-width: 900px;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 20px;        /* WAY smaller */
   display: block;
+  opacity: 0.9;
 }
+
