@@ -2136,3 +2136,18 @@ html.is-loaded .top-hero::before{
     width: auto !important;
   }
 }
+
+/* =========================================
+   FORCE NAV LOGO SIZE TO MATCH (ALL PAGES)
+   Mobile: about/index/pricing/consult = same
+========================================= */
+@media (max-width: 900px){
+
+  /* override the old "52px" mobile logo rule */
+  .nav-logo img{
+    height: 110px !important;
+    max-height: 110px !important;
+    width: auto !important;
+  }
+}
+
