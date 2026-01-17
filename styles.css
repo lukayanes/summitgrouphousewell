@@ -1597,3 +1597,24 @@ button {
 @media (max-width: 900px){
   .top-hero{ overflow-x: hidden; }
 }
+
+@media (max-width: 900px){
+  /* Force perfect center on HOME hero */
+  .top-hero:not(.about-hero) .hero-content{
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .top-hero:not(.about-hero) .hero-title,
+  .top-hero:not(.about-hero) .hero-sub{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+}
