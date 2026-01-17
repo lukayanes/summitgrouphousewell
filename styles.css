@@ -1795,3 +1795,41 @@ html.is-loaded .hero-sub{
     padding-right: 0 !important;
   }
 }
+
+/* =========================================
+   iPHONE HERO: TRUE CENTER + NO CLIPPING
+========================================= */
+@media (max-width: 900px){
+
+  /* 1) Stop the zoom scaling on mobile (it causes drift/clipping) */
+  .top-hero,
+  html.is-loaded .top-hero{
+    transform: none !important;
+  }
+
+  /* 2) Hard-center the background image (house) */
+  .top-hero{
+    background-position: 50% 50% !important;
+    background-size: cover !important;
+  }
+
+  /* 3) Make the H1 fit the screen (THIS fixes "KEEP" clipping) */
+  .hero-title{
+    font-size: 42px !important;      /* drop from 44–58+ */
+    letter-spacing: 1px !important;  /* HUGE fix (yours is big) */
+    padding: 0 18px !important;
+    white-space: normal !important;
+    text-align: center !important;
+    margin: 0 auto 12px !important;
+    max-width: 95vw !important;
+  }
+
+  /* 4) Keep the paragraph block centered and readable */
+  .hero-sub{
+    text-align: center !important;
+    max-width: 92vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    letter-spacing: 1px !important;
+  }
+}
