@@ -1839,3 +1839,20 @@ html.is-loaded .hero-sub{
 @media (max-width: 900px){
   .mobile-break{ display:inline; }
 }
+
+/* Banner under hero (below water) */
+.housewell-banner{
+  width: 100%;
+  background: #0b1f33;          /* navy strip */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 16px;
+}
+
+.housewell-banner img{
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
