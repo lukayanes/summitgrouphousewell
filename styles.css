@@ -2041,3 +2041,25 @@ html.is-loaded .top-hero::before{
   }
 }
 
+/* FIX: banner links not clickable (something is overlaying them) */
+.banner{
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+.banner a{
+  position: relative !important;
+  z-index: 10000 !important;
+  pointer-events: auto !important;
+}
+
+/* make sure hero overlay/background can't steal clicks */
+.top-hero::before{
+  pointer-events: none !important;
+}
+.hero-overlay{
+  pointer-events: none !important;
+}
+.hero-overlay a{
+  pointer-events: auto !important;
+}
