@@ -1304,6 +1304,12 @@ button {
   padding: 90px 0;
 }
 
+/* About page: push title down so it doesn't overlap the logo */
+.about-hero .hero-overlay{
+  padding-top: 200px !important;
+}
+
+
 .about-intro-wrap{
   max-width: 900px;
   text-align: center;
