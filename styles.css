@@ -1609,24 +1609,6 @@ html.is-loaded .about-hero .hero-bg{
   }
 }
 
-@media (max-width: 900px){
-  /* HOME hero: center text perfectly */
-  .top-hero:not(.about-hero) .hero-content{
-    max-width: 520px !important;
-    margin: 0 auto !important;
-    padding: 0 16px !important;
-    box-sizing: border-box !important;
-  }
-
-  .top-hero:not(.about-hero) .hero-title,
-  .top-hero:not(.about-hero) .hero-sub{
-    width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
 
 @media (max-width: 900px){
   .top-hero{ overflow-x: hidden; }
@@ -1652,6 +1634,28 @@ html.is-loaded .about-hero .hero-bg{
     text-align: center !important;
   }
 }
+
+@media (max-width: 900px){
+  /* Force perfect center on HOME hero */
+  .top-hero:not(.about-hero) .hero-content{
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .top-hero:not(.about-hero) .hero-title,
+  .top-hero:not(.about-hero) .hero-sub{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+}
+
 
 /* ================================
    HERO LOAD ANIMATION (GBRS STYLE)
